@@ -38,15 +38,25 @@ flowchart TD
 
 ## Quick start
 
-The application implementation is being developed on a dedicated feature branch. Once the first runnable version is available, this section will contain the exact local setup and run commands.
+Requirements: Node.js 20+ (tests only) and Python 3 (for the simple local server).
+
+```bash
+git clone https://github.com/zopair/GT6-Garage-Companion.git
+cd GT6-Garage-Companion
+git switch feature/garage-simulator-ui
+npm test
+npm run serve
+```
+
+Open `http://localhost:8080`. The app has no runtime package dependencies. Garage records are stored in browser local storage; use **Export Backup** to move them to another device.
 
 ## Proof of Concept & Enterprise Customization Readiness
 
 - [x] Repository initialized
-- [ ] Garage interface and navigation
-- [ ] Local persistence and backup/restore
-- [ ] Race result tracking
-- [ ] Versioned tuning notes
+- [x] Garage interface and navigation
+- [x] Local persistence and backup/restore
+- [x] Race result tracking
+- [x] Setup notebook (named notes; version history is a future enhancement)
 - [ ] Automated tests and accessibility checks
 - [ ] Optional GitHub Pages deployment
 
