@@ -1,0 +1,14 @@
+{
+  "name": "gt6-garage-companion",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Offline-first garage, race tracker, and tuning notebook companion.",
+  "scripts": {
+    "test": "node --test",
+    "serve": "python3 -m http.server 8080"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
