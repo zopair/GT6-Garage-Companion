@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b0e">
+  <meta name="description" content="An offline-first garage, race tracker, and setup notebook for racing game enthusiasts.">
+  <title>GT6 Garage Companion</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./src/app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Garage home"><span class="brand-mark">G</span><span>GARAGE<span class="brand-light"> / COMPANION</span></span></a>
+      <div class="top-meta"><span class="status-dot"></span> LOCAL SESSION <span class="top-divider">|</span> OFFLINE READY</div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">YOUR PERSONAL MOTORSPORT HQ</p>
+          <h1>BUILD YOUR<br><span>LEGACY.</span></h1>
+          <p class="hero-description">Your cars. Your setups. Every lap that made you faster.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#workspace">ENTER GARAGE <span>↗</span></a><span class="micro-copy">NO ACCOUNT · NO CLOUD · YOUR DATA STAYS HERE</span></div>
+        </div>
+        <div class="hero-art" aria-label="Abstract racing-inspired automotive illustration">
+          <div class="speed-lines"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="car-silhouette"><div class="car-roof"></div><div class="car-body"></div><div class="car-window"></div><div class="wheel wheel-front"></div><div class="wheel wheel-back"></div></div>
+          <div class="art-label">01 <span>/ GARAGE SERIES</span></div>
+          <div class="art-caption">DRIVE. RECORD. REFINE.</div>
+        </div>
+      </section>
+      <section class="stats-grid" aria-label="Garage summary">
+        <article class="stat-card"><span class="stat-label">MY COLLECTION</span><strong id="car-count">00</strong><span class="stat-foot">REGISTERED CARS</span></article>
+        <article class="stat-card"><span class="stat-label">RACE LOG</span><strong id="race-count">00</strong><span class="stat-foot">RECORDED EVENTS</span></article>
+        <article class="stat-card"><span class="stat-label">SETUP FILES</span><strong id="setup-count">00</strong><span class="stat-foot">SAVED CONFIGURATIONS</span></article>
+        <article class="stat-card stat-highlight"><span class="stat-label">PERSONAL BEST</span><strong id="best-lap">—</strong><span class="stat-foot">FASTEST RECORDED LAP · SEC</span></article>
+      </section>
+      <section id="workspace" class="workspace">
+        <div class="section-heading"><div><p class="eyebrow">THE CONTROL ROOM</p><h2>YOUR GARAGE</h2></div><div class="storage-note"><span class="status-dot"></span> SAVED ON THIS DEVICE</div></div>
+        <nav class="tabs" aria-label="Garage sections">
+          <button class="tab active" data-tab="cars">01 / COLLECTION</button>
+          <button class="tab" data-tab="races">02 / RACE LOG</button>
+          <button class="tab" data-tab="setups">03 / SETUP LAB</button>
+        </nav>
+        <div class="workspace-grid">
+          <section class="panel main-panel">
+            <div class="panel-heading"><div><p class="eyebrow" id="panel-kicker">YOUR LINEUP</p><h3 id="panel-title">CAR COLLECTION</h3></div><span class="panel-index" id="panel-index">01</span></div>
+            <div id="records" class="records" aria-live="polite"></div>
+          </section>
+          <aside class="panel form-panel">
+            <p class="eyebrow" id="form-kicker">ADD TO THE LINEUP</p><h3 id="form-title">NEW VEHICLE</h3>
+            <form id="record-form"></form>
+            <div class="form-message" id="form-message" role="status"></div>
+          </aside>
+        </div>
+      </section>
+      <section class="data-tools">
+        <div><p class="eyebrow">YOUR DATA, YOUR CALL</p><h3>TAKE IT WITH YOU.</h3><p>Export a backup or restore your garage on another device. Nothing leaves this browser unless you export it.</p></div>
+        <div class="tool-actions"><button class="button button-outline" id="export-data">EXPORT BACKUP ↓</button><label class="button button-outline file-button">IMPORT BACKUP ↑<input id="import-data" type="file" accept="application/json,.json" hidden></label></div>
+      </section>
+    </main>
+    <footer><span>GT6 GARAGE COMPANION <span class="brand-light">· INDEPENDENT FAN-MADE CONCEPT</span></span><span>BUILT FOR THE LOVE OF THE DRIVE.</span></footer>
+  </div>
+</body>
+</html>
