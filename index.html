@@ -3,64 +3,106 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#090b0e">
-  <meta name="description" content="An offline-first garage, race tracker, and setup notebook for racing game enthusiasts.">
-  <title>GT6 Garage Companion</title>
+  <meta name="theme-color" content="#080a0d">
+  <meta name="description" content="An independent, offline-first racing garage companion.">
+  <title>GT6 Garage Companion — Motorsport Experience</title>
   <link rel="stylesheet" href="./styles.css">
   <script type="module" src="./src/app.js"></script>
 </head>
 <body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
   <div class="app-shell">
     <header class="topbar">
-      <a class="brand" href="#" aria-label="Garage home"><span class="brand-mark">G</span><span>GARAGE<span class="brand-light"> / COMPANION</span></span></a>
-      <div class="top-meta"><span class="status-dot"></span> LOCAL SESSION <span class="top-divider">|</span> OFFLINE READY</div>
+      <a class="brand" href="#" aria-label="Garage home"><span class="brand-emblem">G<span>6</span></span><span class="brand-name">MOTORSPORT <b>GARAGE</b></span></a>
+      <div class="top-center"><span class="live-dot"></span> DRIVER PROFILE <b>LOCAL / OFFLINE</b></div>
+      <a class="top-action" href="#workspace"><span class="top-action-icon">↗</span> ENTER THE GARAGE</a>
     </header>
+
     <main>
-      <section class="hero">
+      <section class="hero" aria-label="Featured garage">
+        <div class="hero-backdrop"></div>
+        <div class="hero-grid"></div>
         <div class="hero-copy">
-          <p class="eyebrow">YOUR PERSONAL MOTORSPORT HQ</p>
-          <h1>BUILD YOUR<br><span>LEGACY.</span></h1>
-          <p class="hero-description">Your cars. Your setups. Every lap that made you faster.</p>
-          <div class="hero-actions"><a class="button button-primary" href="#workspace">ENTER GARAGE <span>↗</span></a><span class="micro-copy">NO ACCOUNT · NO CLOUD · YOUR DATA STAYS HERE</span></div>
+          <div class="season-line"><span>01</span><i></i> THE DRIVER'S COLLECTION <i></i><span>GT SERIES</span></div>
+          <p class="hero-kicker">YOUR STORY. YOUR MACHINES. YOUR TRACK.</p>
+          <h1>BUILT<br>TO <em>DRIVE.</em></h1>
+          <p class="hero-description">A personal motorsport world for the cars you collect, the races you conquer, and the setups you perfect.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#workspace">ENTER GARAGE <span>↗</span></a>
+            <span class="hero-note"><b>100%</b> LOCAL EXPERIENCE <i></i> NO ACCOUNT REQUIRED</span>
+          </div>
         </div>
-        <div class="hero-art" aria-label="Abstract racing-inspired automotive illustration">
-          <div class="speed-lines"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-          <div class="car-silhouette"><div class="car-roof"></div><div class="car-body"></div><div class="car-window"></div><div class="wheel wheel-front"></div><div class="wheel wheel-back"></div></div>
-          <div class="art-label">01 <span>/ GARAGE SERIES</span></div>
-          <div class="art-caption">DRIVE. RECORD. REFINE.</div>
+
+        <div class="car-stage" aria-label="Original illustrated performance car">
+          <div class="stage-number">G<span>06</span><small>GARAGE EDITION</small></div>
+          <div class="stage-light"></div>
+          <div class="stage-ring ring-a"></div><div class="stage-ring ring-b"></div>
+          <svg class="hero-car" viewBox="0 0 1000 440" role="img" aria-label="Original low-slung performance coupe illustration">
+            <defs>
+              <linearGradient id="paint" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4f5f6"/><stop offset=".25" stop-color="#9ea8b2"/><stop offset=".52" stop-color="#343d48"/><stop offset=".78" stop-color="#141b24"/><stop offset="1" stop-color="#77818b"/></linearGradient>
+              <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#536b7c"/><stop offset=".45" stop-color="#101a25"/><stop offset="1" stop-color="#080d13"/></linearGradient>
+              <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ed2733" stop-opacity=".55"/><stop offset="1" stop-color="#ed2733" stop-opacity="0"/></linearGradient>
+              <filter id="glow"><feGaussianBlur stdDeviation="14"/></filter>
+            </defs>
+            <ellipse cx="510" cy="350" rx="400" ry="42" fill="url(#floor)" filter="url(#glow)"/>
+            <path d="M100 300 L150 254 264 232 356 147 Q390 119 449 113 L628 121 Q682 127 731 189 L842 224 916 271 933 318 888 341 120 345 72 326Z" fill="url(#paint)" stroke="#c7d0d8" stroke-opacity=".7" stroke-width="3"/>
+            <path d="M323 229 L395 147 Q413 133 454 130 L611 137 Q658 144 705 211Z" fill="url(#glass)" stroke="#b7c2ca" stroke-opacity=".6" stroke-width="4"/>
+            <path d="M506 132 L495 226 M628 139 L677 220" stroke="#9caab6" stroke-opacity=".55" stroke-width="5"/>
+            <path d="M120 278 Q245 248 324 257 L420 266 694 261 Q806 258 909 290" fill="none" stroke="#f3f5f6" stroke-opacity=".5" stroke-width="4"/>
+            <path d="M84 310 Q255 291 384 300 L790 296 928 315" fill="none" stroke="#f12b38" stroke-width="9"/>
+            <path d="M746 222 L860 252 901 280 823 267Z" fill="#e6edf2" opacity=".75"/>
+            <path d="M145 266 L243 244 267 255 173 283Z" fill="#fff" opacity=".72"/>
+            <path d="M365 278 L691 274" stroke="#10151b" stroke-width="7"/>
+            <path d="M415 290 L685 287" stroke="#d7dce0" stroke-opacity=".45" stroke-width="2"/>
+            <g><circle cx="276" cy="326" r="73" fill="#07090c" stroke="#77828d" stroke-width="9"/><circle cx="276" cy="326" r="48" fill="#222a33" stroke="#b7c0c8" stroke-width="6"/><circle cx="276" cy="326" r="15" fill="#e4e8eb"/><path d="M276 279V373 M229 326H323 M243 293L309 359 M309 293L243 359" stroke="#8f9aa4" stroke-width="7"/></g>
+            <g><circle cx="766" cy="326" r="73" fill="#07090c" stroke="#77828d" stroke-width="9"/><circle cx="766" cy="326" r="48" fill="#222a33" stroke="#b7c0c8" stroke-width="6"/><circle cx="766" cy="326" r="15" fill="#e4e8eb"/><path d="M766 279V373 M719 326H813 M733 293L799 359 M799 293L733 359" stroke="#8f9aa4" stroke-width="7"/></g>
+            <path d="M105 327 L162 340 210 342 M842 338 L913 323" stroke="#ed2936" stroke-width="5"/>
+          </svg>
+          <div class="stage-caption"><span>01 / SHOWCASE</span><b>THE ART OF THE DRIVE</b><span>DESIGNED FOR DRIVERS</span></div>
+          <div class="stage-scan"></div>
         </div>
+        <div class="hero-bottom"><span>GARAGE COMPANION <b>—</b> PERSONAL MOTORSPORT ARCHIVE</span><span>SCROLL TO EXPLORE <i>↓</i></span></div>
       </section>
-      <section class="stats-grid" aria-label="Garage summary">
-        <article class="stat-card"><span class="stat-label">MY COLLECTION</span><strong id="car-count">00</strong><span class="stat-foot">REGISTERED CARS</span></article>
-        <article class="stat-card"><span class="stat-label">RACE LOG</span><strong id="race-count">00</strong><span class="stat-foot">RECORDED EVENTS</span></article>
-        <article class="stat-card"><span class="stat-label">SETUP FILES</span><strong id="setup-count">00</strong><span class="stat-foot">SAVED CONFIGURATIONS</span></article>
-        <article class="stat-card stat-highlight"><span class="stat-label">PERSONAL BEST</span><strong id="best-lap">—</strong><span class="stat-foot">FASTEST RECORDED LAP · SEC</span></article>
+
+      <section class="telemetry-strip" aria-label="Garage telemetry">
+        <div class="telemetry-label"><span class="live-dot"></span> YOUR GARAGE DATA</div>
+        <article class="telemetry-item"><span>COLLECTION</span><strong id="car-count">00</strong><small>REGISTERED MACHINES</small></article>
+        <article class="telemetry-item"><span>RACE HISTORY</span><strong id="race-count">00</strong><small>EVENTS RECORDED</small></article>
+        <article class="telemetry-item"><span>SETUP ARCHIVE</span><strong id="setup-count">00</strong><small>CONFIGURATIONS</small></article>
+        <article class="telemetry-item telemetry-best"><span>PERSONAL BEST</span><strong id="best-lap">—</strong><small>FASTEST LAP / SEC</small></article>
       </section>
+
       <section id="workspace" class="workspace">
-        <div class="section-heading"><div><p class="eyebrow">THE CONTROL ROOM</p><h2>YOUR GARAGE</h2></div><div class="storage-note"><span class="status-dot"></span> SAVED ON THIS DEVICE</div></div>
-        <nav class="tabs" aria-label="Garage sections">
-          <button class="tab active" data-tab="cars">01 / COLLECTION</button>
-          <button class="tab" data-tab="races">02 / RACE LOG</button>
-          <button class="tab" data-tab="setups">03 / SETUP LAB</button>
+        <div class="workspace-intro">
+          <div><p class="eyebrow">THE PRIVATE PADDOCK</p><h2>YOUR <em>WORLD.</em></h2></div>
+          <div class="intro-aside"><span class="live-dot"></span><span>SESSION SAVED LOCALLY</span><b>NO CLOUD. NO LIMITS.</b></div>
+        </div>
+        <nav class="tabs" aria-label="Garage modes">
+          <button class="tab active" data-tab="cars"><span>01</span> THE GARAGE</button>
+          <button class="tab" data-tab="races"><span>02</span> RACE RECORDS</button>
+          <button class="tab" data-tab="setups"><span>03</span> TUNING BAY</button>
         </nav>
         <div class="workspace-grid">
           <section class="panel main-panel">
-            <div class="panel-heading"><div><p class="eyebrow" id="panel-kicker">YOUR LINEUP</p><h3 id="panel-title">CAR COLLECTION</h3></div><span class="panel-index" id="panel-index">01</span></div>
+            <div class="panel-heading"><div><p class="eyebrow" id="panel-kicker">YOUR LINEUP</p><h3 id="panel-title">CAR COLLECTION</h3></div><span class="panel-index" id="panel-index">01 / 03</span></div>
             <div id="records" class="records" aria-live="polite"></div>
           </section>
           <aside class="panel form-panel">
-            <p class="eyebrow" id="form-kicker">ADD TO THE LINEUP</p><h3 id="form-title">NEW VEHICLE</h3>
+            <div class="form-topline"><span class="form-icon">＋</span><p class="eyebrow" id="form-kicker">ADD TO THE LINEUP</p></div>
+            <h3 id="form-title">NEW VEHICLE</h3>
+            <div class="form-rule"><span></span></div>
             <form id="record-form"></form>
             <div class="form-message" id="form-message" role="status"></div>
           </aside>
         </div>
       </section>
+
       <section class="data-tools">
-        <div><p class="eyebrow">YOUR DATA, YOUR CALL</p><h3>TAKE IT WITH YOU.</h3><p>Export a backup or restore your garage on another device. Nothing leaves this browser unless you export it.</p></div>
-        <div class="tool-actions"><button class="button button-outline" id="export-data">EXPORT BACKUP ↓</button><label class="button button-outline file-button">IMPORT BACKUP ↑<input id="import-data" type="file" accept="application/json,.json" hidden></label></div>
+        <div class="data-copy"><p class="eyebrow">YOUR GARAGE. YOUR RULES.</p><h3>TAKE YOUR WORLD <em>WITH YOU.</em></h3><p>Your collection belongs to you. Move your garage between devices with a personal backup file.</p></div>
+        <div class="tool-actions"><button class="button button-outline" id="export-data">EXPORT GARAGE <span>↓</span></button><label class="button button-outline file-button">RESTORE GARAGE <span>↑</span><input id="import-data" type="file" accept="application/json,.json" hidden></label></div>
       </section>
     </main>
-    <footer><span>GT6 GARAGE COMPANION <span class="brand-light">· INDEPENDENT FAN-MADE CONCEPT</span></span><span>BUILT FOR THE LOVE OF THE DRIVE.</span></footer>
+    <footer><span class="footer-brand">MOTORSPORT GARAGE <b> / COMPANION</b></span><span>INDEPENDENT FAN-MADE CONCEPT · NOT AFFILIATED WITH THE GAME PUBLISHER</span><span>MADE FOR THE LOVE OF DRIVING.</span></footer>
   </div>
 </body>
 </html>
