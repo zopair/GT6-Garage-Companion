@@ -4,41 +4,36 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Offline-first](https://img.shields.io/badge/architecture-offline--first-blue)](#architecture)
 
-An offline-first garage and race companion for Gran Turismo 6 players. Track a personal car collection, organize race results, and keep versioned tuning notes in one lightweight interface.
+An independent, offline-first motorsport companion concept for Gran Turismo 6 players. It brings a personal car collection, race history, and tuning notebook into a cinematic, game-inspired garage interface.
 
-> **Project status:** Proof of Concept. This is an independent, community-oriented companion concept and is not affiliated with, endorsed by, or sponsored by Sony Interactive Entertainment or the Gran Turismo franchise. Gran Turismo is a trademark of its respective owner. No game assets or proprietary data are included.
+> **Project status:** Proof of Concept. Independent fan-made concept; not affiliated with, endorsed by, or sponsored by Sony Interactive Entertainment or the Gran Turismo franchise. Gran Turismo is a trademark of its respective owner. The interface uses original CSS/SVG artwork and does not bundle game assets.
 
-## Business problem
+## Experience
 
-Players often keep garage details, tuning experiments, and race results across scattered notes or spreadsheets. That makes it difficult to compare setups, remember what worked on a track, and follow progress over time.
-
-## Proposed solution
-
-A responsive, local-first workspace that brings together:
-- **Garage Manager** — organize cars and record user-entered specifications.
-- **Race Tracker** — record events, results, lap times, and personal progress.
-- **Setup Notebook** — save and compare tuning configurations.
-- **Track & Race Planner** — keep personal notes about event requirements.
-
-All records are intended to remain on the user's device, with import/export for backup and portability. No account, hosted backend, paid API, or subscription is required.
+- **Cinematic garage:** original vector performance-car artwork, atmospheric lighting, motion accents, and responsive racing-inspired presentation.
+- **Garage collection:** organize cars and user-entered specifications.
+- **Race records:** track events, finishing positions, and lap times.
+- **Tuning bay:** save named setup notes against a selected car.
+- **Personal archive:** export and restore the garage as JSON.
+- **Offline-first:** no account, hosted backend, paid API, external image dependency, or runtime package dependency.
 
 ## Architecture
 
 ```mermaid
 flowchart TD
-    U[Player] --> UI[Responsive Garage UI]
-    UI --> GM[Garage Manager]
-    UI --> RT[Race Tracker]
-    UI --> SN[Setup Notebook]
-    GM --> DB[(Browser Local Storage / IndexedDB)]
-    RT --> DB
-    SN --> DB
-    DB <--> IO[JSON Import / Export]
+    P[Player] --> UI[Cinematic Responsive UI]
+    UI --> G[Garage Collection]
+    UI --> R[Race Records]
+    UI --> T[Tuning Bay]
+    G --> L[(Browser Local Storage)]
+    R --> L
+    T --> L
+    L <--> X[JSON Export / Restore]
 ```
 
 ## Quick start
 
-Requirements: Node.js 20+ (tests only) and Python 3 (for the simple local server).
+Requirements: Node.js 20+ for tests and Python 3 for the local static server.
 
 ```bash
 git clone https://github.com/zopair/GT6-Garage-Companion.git
@@ -48,30 +43,30 @@ npm test
 npm run serve
 ```
 
-Open `http://localhost:8080`. The app has no runtime package dependencies. Garage records are stored in browser local storage; use **Export Backup** to move them to another device.
+Open `http://localhost:8080`. Data stays in the current browser profile until the user exports it.
 
 ## Proof of Concept & Enterprise Customization Readiness
 
-- [x] Repository initialized
-- [x] Garage interface and navigation
-- [x] Local persistence and backup/restore
-- [x] Race result tracking
-- [x] Setup notebook (named notes; version history is a future enhancement)
-- [ ] Automated tests and accessibility checks
+- [x] Responsive racing-inspired interface
+- [x] Original inline SVG hero artwork (no third-party image dependency)
+- [x] Garage, race, and setup workflows
+- [x] Local persistence and JSON backup/restore
+- [x] Reduced-motion accommodation
+- [ ] Full browser/device QA and accessibility audit
 - [ ] Optional GitHub Pages deployment
 
-**Customization readiness:** The MVP will use modular, client-side components and portable data formats so that future integrations can be evaluated without introducing server or paid-service dependencies.
+**Customization readiness:** The client-side structure and portable JSON data format provide a low-complexity foundation for future extensions without requiring a server or paid services.
 
 ## Data accuracy
 
-Car specifications, PP values, event requirements, and tuning behavior must be treated as user-entered or independently verified data. The application will not claim to reproduce the game's physics or calculate authoritative in-game performance unless validated evidence and permitted data sources are available.
+Car specifications, PP values, event requirements, and tuning behavior are user-entered or independently verified data. This project does not claim to reproduce the game's physics or calculate authoritative in-game performance.
 
 ## Changelog
 
-- **2026-11-25** — Repository initialized; approved implementation branch to follow.
+- **2026-11-25** — Reworked the interface into a cinematic, responsive motorsport garage experience; added original SVG car artwork and removed external visual dependencies.
 
 ## Intellectual Property & Authorship
 
 Original project concept, architecture, and implementation authored by **Aly Hussein Zopair (علي حسين زبير ALY HUSSEIN ZOPAIR)**.
 
-The repository's MIT license applies to original code where included. Third-party names and trademarks remain the property of their respective owners.
+The MIT license applies to original code where included. Third-party names and trademarks remain the property of their respective owners.
